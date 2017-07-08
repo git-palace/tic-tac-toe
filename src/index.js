@@ -109,7 +109,7 @@ class Game extends React.Component {
 			const desc = move ? 'Move (' + ( move % 2 == 1 ? '1' : '2' ) + ', ' + Math.ceil( move / 2 ) + ')' : 'Game Start';
 
 			return (
-				<li key={move}>
+				<li key={move} style={ move === this.state.stepNumber ? {fontWeight: 'bold'} : {} }>
 					<a href="#" onClick={ () => this.jumpTo( move ) }>{desc}</a>
 				</li>
 			)
